@@ -8,3 +8,4 @@
 [node name="RoomA" parent="." instance=ExtResource("1_0b32q")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ylfbt")]
+position = Vector2(687, 344)
