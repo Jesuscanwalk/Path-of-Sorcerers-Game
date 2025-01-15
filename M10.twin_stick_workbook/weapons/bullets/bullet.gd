@@ -1,7 +1,7 @@
 class_name Bullet extends Area2D
 
-@export var speed := 340
-var max_range := 600
+@export var speed := 400
+var max_range := 1000
 var _traveled_distance = 0.0
 
 func _process(delta: float) -> void:
