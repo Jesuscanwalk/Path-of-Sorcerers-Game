@@ -1,9 +1,9 @@
 extends Sprite2D
 
-const SPRITE_DOWN = preload("res://player/godot_bottom.png")
+const SPRITE_UP = preload("res://player/godot_bottom.png")
 const SPRITE_DOWN_RIGHT = preload("res://player/godot_bottom_right.png")
 const SPRITE_RIGHT = preload("res://player/godot_right.png")
-const SPRITE_UP = preload("res://player/godot_up.png")
+const SPRITE_DOWN = preload("res://player/godot_up.png")
 const SPRITE_UP_RIGHT = preload("res://player/godot_up_right.png")
 
 const UP_RIGHT = Vector2.UP + Vector2.RIGHT

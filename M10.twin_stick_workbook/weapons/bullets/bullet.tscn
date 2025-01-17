@@ -13,14 +13,14 @@ script = ExtResource("1_oqeo3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(78, 84.5)
+position = Vector2(1, -0.5)
 texture = ExtResource("2_c435l")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(46, 84.5)
+position = Vector2(-31, -0.5)
 texture = ExtResource("3_3fp6a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
-position = Vector2(78, 84.5)
+position = Vector2(1, -0.5)
 shape = SubResource("CircleShape2D_15x6y")
