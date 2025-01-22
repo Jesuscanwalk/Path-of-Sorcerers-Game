@@ -5,6 +5,10 @@ var _player: player = null
 @export var max_speed := 200.0
 @export var acceleration := 600
 @export var health := 5: set = set_health
+@onready var hitbox: Area2D = $Hitbox
+var damage := 1
+@onready var damage_timer: Timer = $DamageTimer
+
 func _ready() -> void:
 	detection_area.body_entered.connect(func (body: Node) -> void:
 		if body is player:
@@ -14,6 +18,18 @@ func _ready() -> void:
 		if body is player:
 			_player = null
 	)
+	hitbox.body_entered.connect(func (body: Node) -> void:
+		if body is player:
+			body.health -= damage
+			damage_timer.start()
+			)
+	hitbox.body_exited.connect(func (body: Node) -> void:
+		if body is player:
+			damage_timer.stop()
+			)
+	damage_timer.timeout.connect(func () -> void:
+		_player.health -= damage
+		)
 func get_global_player_position() -> Vector2:
 	return get_tree().root.get_node("test/Player").global_position
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvc40ig15txgx"]
+[gd_scene load_steps=6 format=3 uid="uid://bvc40ig15txgx"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_erlke"]
 [ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="1_x21eo"]
@@ -9,6 +9,10 @@ radius = 195.059
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4aicb"]
 radius = 19.0
 height = 141.998
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8m6k"]
+radius = 22.9845
+height = 139.933
 
 [node name="Mob" type="CharacterBody2D"]
 motion_mode = 1
@@ -27,3 +31,12 @@ texture = ExtResource("1_x21eo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.56568
 shape = SubResource("CapsuleShape2D_4aicb")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+rotation = 1.58426
+shape = SubResource("CapsuleShape2D_e8m6k")
+debug_color = Color(0.92549, 0, 0.678431, 0.419608)
+
+[node name="DamageTimer" type="Timer" parent="."]
