@@ -4,6 +4,7 @@ var _player: player = null
 @onready var detection_area: Area2D = %"Detection Area"
 @export var max_speed := 200.0
 @export var acceleration := 600
+@export var health := 5: set = set_health
 func _ready() -> void:
 	detection_area.body_entered.connect(func (body: Node) -> void:
 		if body is player:
@@ -26,3 +27,8 @@ func _physics_process(delta: float) -> void:
 		var desired_velocity := direction * speed
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 		move_and_slide()
+
+func set_health(new_health: int) -> void:
+	health = new_health
+	if health <= 0:
+		queue_free()
