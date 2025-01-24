@@ -8,6 +8,10 @@ var health := max_health: set = set_health
 @onready var health_bar: ProgressBar = $HealthBar
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
+func _ready() -> void:
+	health_bar.max_value = max_health
+	health_bar.value = health
+	
 func _physics_process(delta: float) -> void:
 	var move_direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = SPEED * move_direction
