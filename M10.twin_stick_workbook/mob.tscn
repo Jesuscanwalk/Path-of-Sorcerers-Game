@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="1_x21eo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gc4c"]
-radius = 195.059
+radius = 275.465
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4aicb"]
 radius = 19.0
