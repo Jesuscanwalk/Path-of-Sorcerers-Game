@@ -1,7 +1,7 @@
 class_name player extends CharacterBody2D
 
 
-@export var SPEED = 300.0
+@export var SPEED = 450.0
 @export var JUMP_VELOCITY = -400.0
 var max_health := 10
 var health := max_health: set = set_health
