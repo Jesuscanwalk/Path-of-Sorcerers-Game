@@ -10,7 +10,6 @@ func _ready() -> void:
 	body_entered.connect(func(body: Node) -> void:
 		if body is player:
 			item.use(body)
-			
 			queue_free()
 			)
 

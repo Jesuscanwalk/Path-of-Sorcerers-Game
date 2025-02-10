@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0dtq0bnono7v"]
+
+[ext_resource type="FontFile" uid="uid://djfuvgrnv54kr" path="res://common/title_font.tres" id="1_lguit"]
+[ext_resource type="Script" path="res://end_screen.gd" id="2_1ddhs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2oa6k"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcreu"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.7446, 0.709951, 0.998015, 0.72549)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="Theme" id="Theme_wkg64"]
+default_font = ExtResource("1_lguit")
+default_font_size = 42
+Button/colors/font_color = Color(1, 0.836839, 0.991261, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_2oa6k")
+Label/font_sizes/font_size = 64
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_dcreu")
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wkg64")
+script = ExtResource("2_1ddhs")
+
+[node name="UIPanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -174.0
+offset_right = 298.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UIPanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIPanelContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "YAY!!"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="UIPanelContainer/VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "time"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UIPanelContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIPanelContainer/VBoxContainer2/CenterContainer"]
+layout_mode = 2
+
+[node name="RetryButton" type="Button" parent="UIPanelContainer/VBoxContainer2/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "RETRY
+"
+
+[node name="QuitButton" type="Button" parent="UIPanelContainer/VBoxContainer2/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "QUIT
+"
