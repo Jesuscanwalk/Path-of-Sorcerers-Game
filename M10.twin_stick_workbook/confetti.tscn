@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://gecnvw1aicaa"]
+
+[ext_resource type="Texture2D" uid="uid://c33mf20ohybyi" path="res://common/particles/white_circle.png" id="1_qwx5f"]
+
+[sub_resource type="Gradient" id="Gradient_8mtyk"]
+offsets = PackedFloat32Array(0.337634, 0.623656, 1)
+colors = PackedColorArray(0.553806, 0.721655, 0.98986, 1, 0.976471, 0.215686, 0.298039, 1, 1, 0.576471, 0.996078, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j6pxt"]
+gradient = SubResource("Gradient_8mtyk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nbtlk"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+initial_velocity_min = 6.75
+initial_velocity_max = 1000.0
+gravity = Vector3(0, 225.38, 0)
+scale_min = 0.5
+scale_max = 0.5
+color_initial_ramp = SubResource("GradientTexture1D_j6pxt")
+
+[node name="Confetti" type="GPUParticles2D" groups=["Confettis", "confettis_"]]
+rotation = -1.54243
+scale = Vector2(0.3, 0.3)
+emitting = false
+amount = 48
+process_material = SubResource("ParticleProcessMaterial_nbtlk")
+texture = ExtResource("1_qwx5f")
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.9

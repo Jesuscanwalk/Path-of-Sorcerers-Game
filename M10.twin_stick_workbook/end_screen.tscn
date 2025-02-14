@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0dtq0bnono7v"]
+[gd_scene load_steps=7 format=3 uid="uid://b0dtq0bnono7v"]
 
 [ext_resource type="FontFile" uid="uid://djfuvgrnv54kr" path="res://common/title_font.tres" id="1_lguit"]
 [ext_resource type="Script" path="res://end_screen.gd" id="2_1ddhs"]
+[ext_resource type="PackedScene" uid="uid://gecnvw1aicaa" path="res://confetti.tscn" id="3_kjxsn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2oa6k"]
 content_margin_left = 20.0
@@ -41,7 +42,7 @@ grow_vertical = 2
 theme = SubResource("Theme_wkg64")
 script = ExtResource("2_1ddhs")
 
-[node name="UIPanelContainer" type="PanelContainer" parent="."]
+[node name="UIPanelContainer" type="PanelContainer" parent="." groups=["Confettis"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -90,6 +91,9 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "QUIT
 "
+
+[node name="Confetti" parent="." instance=ExtResource("3_kjxsn")]
+position = Vector2(569, 932)
 
 [connection signal="pressed" from="UIPanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="UIPanelContainer/VBoxContainer2/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
