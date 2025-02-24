@@ -72,12 +72,12 @@ position = Vector2(832, 576)
 [node name="Bridges" parent="." instance=ExtResource("12_qvri5")]
 tile_map_data = PackedByteArray("AAAKAAQAAAABAAEAAAALAAQAAAABAAEAAAAMAAQAAAABAAEAAAAOAAQAAAACAAAAAAAOAAYAAAABAAEAAAAOAAUAAAABAAEAAAAOAAcAAAABAAEAAAAPAAcAAAABAAEAAAAQAAcAAAABAAEAAAARAAcAAAABAAEAAAANAAQAAAABAAEAAAAZAAIAAAABAAEAAAARAPr/AAABAAEAAAARAPv/AAABAAEAAAARAPz/AAABAAEAAAARAP3/AAAEAAEAAAASAP3/AAAEAAEAAAAUAP3/AAAEAAEAAAATAP3/AAAEAAEAAAAVAP3/AAACAAAAAAAVAP7/AAABAAEAAAAVAP//AAABAAEAAAAWAAAAAAAEAAEAAAAXAAAAAAAEAAEAAAAYAAAAAAAEAAEAAAAZAAEAAAABAAEAAAAZAAAAAAACAAAAAAAVAAAAAAAEAAEAAAA=")
 
-[node name="Player" parent="." instance=ExtResource("2_ylfbt")]
-position = Vector2(192, 896)
-
 [node name="Teleporter" parent="." instance=ExtResource("16_rigtg")]
 unique_name_in_owner = true
-position = Vector2(768, 704)
+position = Vector2(1920, -1984)
+
+[node name="Player" parent="." instance=ExtResource("2_ylfbt")]
+position = Vector2(738, 1080)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
